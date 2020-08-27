@@ -1,0 +1,49 @@
+html, body {
+    background-color: rgb(50, 62, 121);
+    color: black;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form {
+    width: 50%;
+    align-self: center;
+    border-width:5px;
+    border-style: double;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+table, th, td {
+    border: 2px solid black;
+}
+
+th {
+    background-color: rgb(90, 90, 90);
+    color: black;
+}
+
+.first-td {
+    background-color: rgb(218, 215, 211);
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+}
+
+
+
