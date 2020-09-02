@@ -1,5 +1,5 @@
 <h1>Vanilla Javascript Expense Tracker App</h1>
-View App <a href="">here</a>
+View App <a href="https://stev1905.github.io/Expense-Tracker-App/">here</a>
 <br>
 
 <i>Expense tracker app is written in Vanillas Javascript, HTML & CSS</i>
