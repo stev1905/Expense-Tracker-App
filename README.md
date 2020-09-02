@@ -7,7 +7,7 @@ View App <a href="https://stev1905.github.io/Expense-Tracker-App/">here</a>
 ![ExpenseTracker](https://user-images.githubusercontent.com/13443788/91929091-a29d4500-ecab-11ea-9dc0-8feba8ebb640.JPG)
 
 <h1>Summary</h1>
-<p><i>This simple expense tracker application was created to help me further understand the principles of Javascript and DOM manipulation. The app allows the user to input their expenses to a table and delete specific rows as needed. I've also incorporated some local storage functionality so that the expense tracker holds the values when the browser window is re-loaded. Feel free to open the application to create your very own expense list!</i></p>
+<p><i>This simple expense tracker application was created to help me further understand DOM manipulation with vanilla Javascript. The app allows the user to input their expenses to a table and delete specific rows as needed. I've also incorporated some local storage functionality so that the expense tracker holds the values when the browser window is re-loaded. Feel free to open the application to create your very own expense list!</i></p>
 
 <h1>Author</h1>
 <ul>
