@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgb(50, 62, 121);
+    background-color: rgb(136, 146, 197);
     color: black;
 }
 
@@ -36,6 +36,19 @@ th {
     color: black;
 }
 
+tr:nth-child(even) {
+    background-color: hsla(0, 75%, 35%, 0.678);
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+td {
+    background-color: rgb(218, 215, 211);
+    font-style: italic;
+    padding-left: 20px;
+}
 .first-td {
     background-color: rgb(218, 215, 211);
 }
@@ -44,6 +57,10 @@ th {
     display: flex;
     justify-content: center;
 }
+
+
+
+
 
 
 

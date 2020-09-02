@@ -4,49 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Expense Tracker App</title>
 </head>
 <body>
     <h1>Expense Tracker</h1>
         <div class="container">
-            <form>
+            <form id ="myForm">
                 <div class="form-row">
-                <div class="col-md-5 mb-4">
-                    <label for="validationDefault01">Expense:</label>
-                    <input type="text" class="form-control" id="validationDefault01" placeholder="What did you spend on?" required>
-                </div>
-                <div class="col-md-5 mb-4">
-                    <label for="validationDefault02">Amount:</label>
-                    <input type="text" class="form-control" id="validationDefault02" placeholder="how much?" required>
-                </div>
+                    <div class="col-md-5 mb-4">
+                        <label for="validationDefault01">Expense:</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="What did you spend on?" required>
+                    </div>
+                    <div class="col-md-5 mb-4">
+                        <label for="validationDefault02">Amount:</label>
+                        <input type="number" class="form-control" id="validationDefault02" placeholder="how much?" min="1" max="5" required>
+                    </div>
                 </div>
                 <div class="form-row">
-                <div class="col-md-5 mb-4">
-                    <label for="validationDefault03">Date:</label>
-                    <input type="date" class="form-control" id="validationDefault03" required>
-                </div>
-                <div class="col-md-5 mb-4">
-                    <label for="validationDefault04">Payment:</label>
-                    <select class="custom-select" id="validationDefault04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>Card</option>
-                    <option>Cash</option>
-                    <option>Check</option>
-                    </select>
-                </div>
+                    <div class="col-md-5 mb-4">
+                        <label for="validationDefault03">Date:</label>
+                        <input type="date" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="col-md-5 mb-4">
+                        <label for="validationDefault04">Payment:</label>
+                        <select class="custom-select" id="validationDefault04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Card</option>
+                        <option>Cash</option>
+                        <option>Check</option>
+                        </select>
+                    </div>
                 </div>
                 <button type="button" class="btn btn-primary btn-lg btn-block">Add Item</button>
             </form>
-            <table>
+            <table id="myTable">
                 <tr class="table-header">
-                    <th>Date</th>
-                    <th>Payment Type</th>
-                    <th>Expense</th>
-                    <th>Amount</th>
+                    <th width="10%">Date</th>
+                    <th width="35%">Expense</th>
+                    <th width="10%">Payment Type</th>
+                    <th width="10%">Amount</th>
+                    <th width="5%">Delete</th>
                 </tr>
                 <tr>
-                    <td class="first-td" align="center" colspan="4">Expenses will display here!</td>
+                    <td class="first-td" align="center" colspan="5">Expenses will display here!</td>
                 </tr>
             </table>
         </div>
@@ -54,5 +55,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </body>
 </html>
