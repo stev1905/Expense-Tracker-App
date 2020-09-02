@@ -4,10 +4,10 @@ View App <a href="">here</a>
 
 <i>Expense tracker app is written in Vanillas Javascript, HTML & CSS</i>
 
-
+![ExpenseTracker](https://user-images.githubusercontent.com/13443788/91929091-a29d4500-ecab-11ea-9dc0-8feba8ebb640.JPG)
 
 <h1>Summary</h1>
-<p><i>I had alot of fun creating this game. It's written in HTML, CSS & Vanilla Javascript. I tried to experiment and add some cool css effects. To start, the user must select either rock, paper or scissors on the top row. Once clicked, there is a event listener that will fire and handle the logic of playing against the computer and determining the winner. Check it out and good luck beating the computer!</i></p>
+<p><i>This simple expense tracker was created to help me further understand Javascript and DOM manipulation. I incorporated some local storage functionality so that the expense tracker hold it's values when the browser window is reloaded. Feel free to open the app create your very own expense list.</i></p>
 
 <h1>Author</h1>
 <ul>
