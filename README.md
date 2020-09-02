@@ -2,7 +2,7 @@
 View App <a href="https://stev1905.github.io/Expense-Tracker-App/">here</a>
 <br>
 
-<i>Expense tracker app is written in Vanillas Javascript, HTML & CSS</i>
+<i>Expense tracker app is written in Vanilla Javascript, HTML & CSS</i>
 
 ![ExpenseTracker](https://user-images.githubusercontent.com/13443788/91929091-a29d4500-ecab-11ea-9dc0-8feba8ebb640.JPG)
 
