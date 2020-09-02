@@ -32,11 +32,7 @@ function renderRow(expense) {
     let trashCanTd = document.createElement('td');
     trashCanTd.appendChild(deleteButton);
     tr.appendChild(trashCanTd);
-    if(savedExpenses.length > 0) {
-        document.getElementsByClassName('first-td')[0].style.display ='none';
-    } else {
-        document.getElementsByClassName('first-td')[0].style.display ='';
-    }
+    hideFirstRow(savedExpenses);
 
     table.appendChild(tr);
 }
@@ -54,6 +50,7 @@ function addExpense() {
     renderRow(expense);
     let savedExpenses = getSavedExpenses();
     savedExpenses.push(expense);
+    hideFirstRow(savedExpenses);
     localStorage.setItem(SAVED_EXPENSES_KEY, JSON.stringify(savedExpenses));
     document.getElementById('myForm').reset();
 }
@@ -68,11 +65,7 @@ function removeExpense(e) {
             const expenseDelete = savedExpenses.find(expense => expense.id.toString() === e.target.id);
             const index = savedExpenses.indexOf(expenseDelete);
             savedExpenses.splice(index, 1);
-            if(savedExpenses.length > 0) {
-                document.getElementsByClassName('first-td')[0].style.display ='none';
-            } else {
-                document.getElementsByClassName('first-td')[0].style.display ='';
-            }
+            hideFirstRow(savedExpenses);
             localStorage.setItem(SAVED_EXPENSES_KEY, JSON.stringify(savedExpenses));
         } 
     }
@@ -80,4 +73,12 @@ function removeExpense(e) {
 
 function getSavedExpenses() {
     return JSON.parse(localStorage.getItem(SAVED_EXPENSES_KEY)) || [];
+}
+
+function hideFirstRow(savedExpenses) {
+    if(savedExpenses.length > 0) {
+        document.getElementsByClassName('first-td')[0].style.display ='none';
+    } else {
+        document.getElementsByClassName('first-td')[0].style.display ='';
+    }
 }
