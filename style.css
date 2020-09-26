@@ -58,6 +58,13 @@ td {
     justify-content: center;
 }
 
+.invalid-field {
+    border: 2px solid red;
+}
+
+.do-not-display {
+    display: none;
+}
 
 
 

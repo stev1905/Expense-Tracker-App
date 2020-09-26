@@ -1,9 +1,15 @@
 const SAVED_EXPENSES_KEY = 'saved-expenses';
 
-let table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-let button = document.getElementsByClassName('btn btn-primary btn-lg btn-block')[0];
+const table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+const firstTd = document.getElementById('first-td');
 
-const savedExpenses =  getSavedExpenses();
+const button = document.getElementById('addExpenseBtn');
+const expenseItem = document.getElementById('validationDefault01');
+const amount = document.getElementById('validationDefault02');
+const expenseDate = document.getElementById('validationDefault03');
+const formOfPayment = document.getElementById('validationDefault04');
+
+const savedExpenses =  getSavedExpenses(); 
 savedExpenses.forEach(expense => renderRow(expense));
 
 function renderRow(expense) {
@@ -37,22 +43,41 @@ function renderRow(expense) {
     table.appendChild(tr);
 }
 
+function checkForEmpty(element) {
+    if(!element.value) {
+        element.classList.add('invalid-field');
+        return false;
+    } else {
+        element.classList.remove('invalid-field');
+        return true;
+    }
+}
+
 button.addEventListener('click', addExpense);
 function addExpense() {
-    const expense = {
-        id: Math.floor(new Date().getTime() * Math.random()),
-        expenseItem: document.getElementsByTagName('form')[0][0].value,
-        amount: document.getElementsByTagName('form')[0][1].value,
-        date: document.getElementsByTagName('form')[0][2].value,
-        formOfPayment: document.getElementsByTagName('form')[0][3].value,
-    }
+    const invalidItem = checkForEmpty(expenseItem);
+    const invalidAmount = checkForEmpty(amount);
+    const invalidDate = checkForEmpty(expenseDate);
+    const invalidFormOfPayment = checkForEmpty(formOfPayment);
 
-    renderRow(expense);
-    let savedExpenses = getSavedExpenses();
-    savedExpenses.push(expense);
-    hideFirstRow(savedExpenses);
-    localStorage.setItem(SAVED_EXPENSES_KEY, JSON.stringify(savedExpenses));
-    document.getElementById('myForm').reset();
+    if(!invalidItem || !invalidAmount || !invalidDate || !invalidFormOfPayment) {
+        alert('Please enter a value');
+        return;
+    } else {
+        const expense = {
+            id: Math.floor(new Date().getTime() * Math.random()),
+            expenseItem: expenseItem.value,
+            amount: amount.value,
+            date: expenseDate.value,
+            formOfPayment: formOfPayment.value,
+        }   
+        renderRow(expense);
+        let savedExpenses = getSavedExpenses();
+        savedExpenses.push(expense);
+        hideFirstRow(savedExpenses);
+        localStorage.setItem(SAVED_EXPENSES_KEY, JSON.stringify(savedExpenses));
+        document.getElementById('myForm').reset();
+    }
 }
 
 table.addEventListener('click', removeExpense);
@@ -77,8 +102,8 @@ function getSavedExpenses() {
 
 function hideFirstRow(savedExpenses) {
     if(savedExpenses.length > 0) {
-        document.getElementsByClassName('first-td')[0].style.display ='none';
+        firstTd.classList.add('do-not-display');
     } else {
-        document.getElementsByClassName('first-td')[0].style.display ='';
+        firstTd.classList.remove('do-not-display');
     }
 }
